@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import HomePage from "./HomePage";
+import Login from "./Login";
 import "../styles/App.css";
 
 const App = () => {
@@ -10,7 +10,7 @@ const App = () => {
         <Header />
       </div>
       <div className="main">
-        <HomePage />
+        <Login />
       </div>
       <div className="footer">footer</div>
     </div>
