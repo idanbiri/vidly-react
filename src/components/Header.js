@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LoginButton from "./LoginButton";
 import "../styles/Header.css";
 
 const Header = () => {
@@ -10,24 +11,23 @@ const Header = () => {
           src="https://image.flaticon.com/icons/png/512/1680/1680371.png"
           height="60"
           width="60"
+          alt="batman logo"
         />
       </Link>
       <nav>
         <ul className="nav-links">
           <li>
-            <a href="#">Movies</a>
+            <a>Movies</a>
           </li>
           <li>
-            <a href="#">Tvshows</a>
+            <a>Tvshows</a>
           </li>
           <li>
-            <a href="#">Transactions</a>
+            <a>Transactions</a>
           </li>
         </ul>
       </nav>
-      <Link to="/login" className="login-button">
-        <button>Login</button>
-      </Link>
+      <LoginButton />
       <a className="login-button" href="#">
         <button>Signup</button>
       </a>

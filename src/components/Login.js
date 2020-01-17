@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import vidly from "../apis/index";
 import { setAccessToken } from "../services/LocalStorageService";
+import UserStatusContext from "../contexts/UserStatus";
 import "../styles/Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { onChangeUserStatus } = useContext(UserStatusContext);
 
   const onFormSubmit = async e => {
     e.preventDefault();
@@ -14,7 +16,10 @@ const Login = () => {
       password
     };
     const { data: accToken } = await vidly.post("/api/auth", loginObj);
-    setAccessToken(accToken);
+    if (accToken) {
+      setAccessToken(accToken);
+      onChangeUserStatus(true);
+    }
   };
 
   return (
