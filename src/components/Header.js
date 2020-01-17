@@ -25,7 +25,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <Link to="/login" className="login-button" href="#">
+      <Link to="/login" className="login-button">
         <button>Login</button>
       </Link>
       <a className="login-button" href="#">

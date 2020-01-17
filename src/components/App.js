@@ -19,7 +19,6 @@ const App = () => {
               <Modal />
             </div>
           </Route>
-          <div className="footer">footer</div>
         </Switch>
       </Router>
     </div>
