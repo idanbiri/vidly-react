@@ -1,0 +1,23 @@
+.wrapper {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-areas:
+    "header header"
+    "main   main"
+    "footer footer";
+  background-image: url("https://wallpaperaccess.com/full/97340.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.header {
+  grid-area: header;
+}
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
