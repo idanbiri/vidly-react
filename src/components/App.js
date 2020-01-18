@@ -2,9 +2,10 @@ import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
 
 import Header from "./Header";
-import Modal from "../Modal";
+import Login from "./Login";
 import history from "../history";
 import { UserStatusProvider } from "../contexts/UserStatus";
+
 import "../styles/App.css";
 
 const App = () => {
@@ -18,7 +19,7 @@ const App = () => {
           <Switch>
             <Route path="/login" exact>
               <div className="main">
-                <Modal />
+                <Login />
               </div>
             </Route>
           </Switch>
