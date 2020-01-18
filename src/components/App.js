@@ -4,6 +4,7 @@ import { Router, Route, Switch } from "react-router-dom";
 import Header from "./Header";
 import Login from "./Login";
 import Movies from "./Movies";
+import MovieDetail from "./MovieDetail";
 import history from "../history";
 import { UserStatusProvider } from "../contexts/UserStatus";
 
@@ -19,12 +20,9 @@ const App = () => {
           </div>
           <div className="main">
             <Switch>
-              <Route path="/login" exact>
-                <Login />
-              </Route>
-              <Route path="/movies" exact>
-                <Movies />
-              </Route>
+              <Route path="/login" exact component={Login} />
+              <Route path="/movies" exact component={Movies} />
+              <Route path="/movie/:movieId" exact component={MovieDetail} />
             </Switch>
           </div>
         </Router>

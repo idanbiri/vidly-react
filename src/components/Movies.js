@@ -20,7 +20,12 @@ const Movies = () => {
     });
   };
 
-  return <ul className="movies-container">{renderMovies()}</ul>;
+  return (
+    <>
+      <h2 className="movies-header">Movies</h2>
+      <ul className="movies-container">{renderMovies()}</ul>
+    </>
+  );
 };
 
 export default Movies;

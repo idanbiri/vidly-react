@@ -4,13 +4,14 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 9fr;
   grid-template-areas:
     "header header"
     "main   main";
   background-image: url("https://wallpaperaccess.com/full/97340.jpg");
-  background-position: center;
+  background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {

@@ -1,0 +1,33 @@
+.movie-detail-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr auto;
+}
+
+.movie-detail-header {
+  text-align: center;
+}
+
+.movie-detail-header h3 {
+  font-family: "Fruktur", cursive;
+  font-size: 40px;
+  font-weight: 500;
+  color: white;
+}
+
+.movie-detail-header h4 {
+  font-family: "Fruktur", cursive;
+  font-size: 30px;
+  font-weight: 500;
+  color: linear-gradient(to right, #000000, #434343);
+  margin: 2px;
+}
+
+.movie-detail-img img {
+  width: 35%;
+  max-height: 100%;
+  object-fit: fill;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 5px rgba(29, 28, 28, 0.849);
+}

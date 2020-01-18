@@ -3,3 +3,12 @@
   grid-gap: 10px;
   grid-template-columns: repeat(4, 1fr);
 }
+
+.movies-header {
+  text-align: center;
+  font-family: "Fruktur", cursive;
+  font-size: 60px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-shadow: 2px 2px 2px snow;
+}
