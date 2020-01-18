@@ -3,6 +3,7 @@ import { Router, Route, Switch } from "react-router-dom";
 
 import Header from "./Header";
 import Login from "./Login";
+import Movies from "./Movies";
 import history from "../history";
 import { UserStatusProvider } from "../contexts/UserStatus";
 
@@ -16,13 +17,16 @@ const App = () => {
           <div className="header">
             <Header />
           </div>
-          <Switch>
-            <Route path="/login" exact>
-              <div className="main">
+          <div className="main">
+            <Switch>
+              <Route path="/login" exact>
                 <Login />
-              </div>
-            </Route>
-          </Switch>
+              </Route>
+              <Route path="/movies" exact>
+                <Movies />
+              </Route>
+            </Switch>
+          </div>
         </Router>
       </UserStatusProvider>
     </div>

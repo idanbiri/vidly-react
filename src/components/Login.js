@@ -15,7 +15,7 @@ const Login = () => {
       email,
       password
     };
-    const { data: accToken } = await vidly.post("/api/auth", loginObj);
+    const { data: accToken } = await vidly.post("/auth", loginObj);
     if (accToken) {
       setAccessToken(accToken);
       onChangeUserStatus(true);

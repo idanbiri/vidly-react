@@ -2,7 +2,7 @@ import axios from "axios";
 import { getAccessToken } from "../services/LocalStorageService";
 
 let instance = axios.create({
-  baseURL: "http://localhost:4000"
+  baseURL: "http://localhost:4000/api"
 });
 
 instance.interceptors.request.use(

@@ -1,11 +1,13 @@
+body {
+  height: 100vh;
+}
+
 .wrapper {
   display: grid;
-  height: 100vh;
-  width: 100vw;
+  grid-template-rows: 1fr 4fr;
   grid-template-areas:
     "header header"
-    "main   main"
-    "footer footer";
+    "main   main";
   background-image: url("https://wallpaperaccess.com/full/97340.jpg");
   background-position: center;
   background-size: cover;
