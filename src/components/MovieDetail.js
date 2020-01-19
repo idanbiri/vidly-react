@@ -21,7 +21,6 @@ const MovieDetail = props => {
     return movie.genre.name;
   };
 
-  console.log(movie);
   return (
     <div className="movie-detail-container">
       <div className="movie-detail-header">
@@ -32,7 +31,7 @@ const MovieDetail = props => {
         <img src={movie.image} alt="movie img" />
       </div>
       <div className="movie-detail-comments">
-        <Comments comments={movie.comments} />
+        <Comments movieId={props.match.params.movieId} />
       </div>
     </div>
   );

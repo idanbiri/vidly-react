@@ -16,7 +16,6 @@ const checkInfo = () => {
 
 export const UserInfoProvider = props => {
   const [userInfo, SetUserInfo] = useState(checkInfo);
-  console.log(userInfo);
   const onChangeUserInfo = info => {
     SetUserInfo(info);
   };

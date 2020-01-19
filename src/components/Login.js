@@ -4,6 +4,7 @@ import { setAccessToken } from "../services/LocalStorageService";
 import { parseJwt } from "../services/JwtService";
 import UserStatusContext from "../contexts/UserStatus";
 import UserInfoContext from "../contexts/UserInfo";
+import history from "../history";
 import "../styles/Login.css";
 
 const Login = () => {
@@ -24,6 +25,7 @@ const Login = () => {
       onChangeUserStatus(true);
       const userInfo = parseJwt(accToken);
       onChangeUserInfo(userInfo);
+      history.push("/");
     }
   };
 
