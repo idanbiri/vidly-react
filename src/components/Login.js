@@ -1,13 +1,16 @@
 import React, { useState, useContext } from "react";
 import vidly from "../apis/index";
 import { setAccessToken } from "../services/LocalStorageService";
+import { parseJwt } from "../services/JwtService";
 import UserStatusContext from "../contexts/UserStatus";
+import UserInfoContext from "../contexts/UserInfo";
 import "../styles/Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { onChangeUserStatus } = useContext(UserStatusContext);
+  const { onChangeUserInfo } = useContext(UserInfoContext);
 
   const onFormSubmit = async e => {
     e.preventDefault();
@@ -19,6 +22,8 @@ const Login = () => {
     if (accToken) {
       setAccessToken(accToken);
       onChangeUserStatus(true);
+      const userInfo = parseJwt(accToken);
+      onChangeUserInfo(userInfo);
     }
   };
 

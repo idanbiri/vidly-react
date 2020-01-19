@@ -7,26 +7,29 @@ import Movies from "./Movies";
 import MovieDetail from "./MovieDetail";
 import history from "../history";
 import { UserStatusProvider } from "../contexts/UserStatus";
+import { UserInfoProvider } from "../contexts/UserInfo";
 
 import "../styles/App.css";
 
 const App = () => {
   return (
     <div className="wrapper">
-      <UserStatusProvider>
-        <Router history={history}>
-          <div className="header">
-            <Header />
-          </div>
-          <div className="main">
-            <Switch>
-              <Route path="/login" exact component={Login} />
-              <Route path="/movies" exact component={Movies} />
-              <Route path="/movie/:movieId" exact component={MovieDetail} />
-            </Switch>
-          </div>
-        </Router>
-      </UserStatusProvider>
+      <UserInfoProvider>
+        <UserStatusProvider>
+          <Router history={history}>
+            <div className="header">
+              <Header />
+            </div>
+            <div className="main">
+              <Switch>
+                <Route path="/login" exact component={Login} />
+                <Route path="/movies" exact component={Movies} />
+                <Route path="/movie/:movieId" exact component={MovieDetail} />
+              </Switch>
+            </div>
+          </Router>
+        </UserStatusProvider>
+      </UserInfoProvider>
     </div>
   );
 };
