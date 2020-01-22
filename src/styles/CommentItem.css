@@ -11,9 +11,17 @@
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   color: black;
-  padding-left: 10px;
+  padding-left: 2px;
 }
 
 .comment-container {
   display: flex;
+}
+
+.comment-container button {
+  font-size: 12px;
+  background-color: rgb(214, 37, 37);
+  margin-left: 10px;
+  padding: 5px 12px;
+  margin-bottom: 10px;
 }

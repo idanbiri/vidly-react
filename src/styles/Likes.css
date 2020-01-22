@@ -1,0 +1,26 @@
+.like-img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.dislike-img {
+  width: 40px;
+  height: 40px;
+  margin-top: 15px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.like-count {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: #edf0f1;
+  margin-top: 20px;
+  margin-left: 5px;
+}
+
+.like-number {
+  color: blue;
+}

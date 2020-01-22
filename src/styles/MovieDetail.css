@@ -1,10 +1,14 @@
 .movie-detail-container {
   display: grid;
-  grid-template-rows: 1fr 1fr auto;
+  grid-template-columns: 1fr 1fr 2fr 1fr;
+  grid-template-rows: 10% 30% 10% auto;
+  height: 100%;
 }
 
 .movie-detail-header {
   text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 4;
 }
 
 .movie-detail-header h3 {
@@ -23,11 +27,39 @@
 }
 
 .movie-detail-img img {
-  width: 35%;
+  width: 50%;
   max-height: 100%;
-  object-fit: fill;
+  /* object-fit: fill;
   display: block;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
+  align-self: center;
   box-shadow: 5px 5px 5px rgba(29, 28, 28, 0.849);
+}
+
+.movie-detail-img {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-self: start;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.movie-detail-comments {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.movie-detail-likes {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  display: flex;
+  justify-content: flex-end;
 }
