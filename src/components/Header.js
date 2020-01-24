@@ -8,7 +8,7 @@ const Header = () => {
     <header id="nav">
       <Link to="/" className="logo">
         <img
-          src="https://image.flaticon.com/icons/png/512/1680/1680371.png"
+          src="https://image.flaticon.com/icons/svg/863/863133.svg"
           height="60"
           width="60"
           alt="batman logo"

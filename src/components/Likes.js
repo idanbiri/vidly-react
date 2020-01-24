@@ -21,18 +21,29 @@ const Likes = ({ movieId }) => {
         <>
           <img
             onClick={onDislikeBtnClick}
-            src="https://image.flaticon.com/icons/svg/1455/1455915.svg"
+            src="https://image.flaticon.com/icons/svg/889/889220.svg"
             className="dislike-img"
           />
           <img
             onClick={onLikeBtnClick}
             className="like-img"
-            src="https://image.flaticon.com/icons/svg/456/456115.svg"
+            src="https://image.flaticon.com/icons/svg/889/889221.svg"
           />
         </>
       );
     }
-    return null;
+    return (
+      <>
+        <img
+          src="https://image.flaticon.com/icons/svg/889/889220.svg"
+          className="dislike-img"
+        />
+        <img
+          className="like-img"
+          src="https://image.flaticon.com/icons/svg/889/889221.svg"
+        />
+      </>
+    );
   };
 
   const onDislikeBtnClick = async () => {
@@ -59,7 +70,7 @@ const Likes = ({ movieId }) => {
     <>
       {renderButtons()}
       <span className="like-count">
-        <span className="like-number">{likeCount} </span>
+        <span className="like-number">{likeCount}</span>
         Likes
       </span>
     </>

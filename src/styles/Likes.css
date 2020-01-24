@@ -15,12 +15,14 @@
 .like-count {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 15px;
   color: #edf0f1;
-  margin-top: 20px;
+  margin-top: 18px;
   margin-left: 5px;
 }
 
 .like-number {
   color: blue;
+  font-size: 25px;
+  margin-right: 2px;
 }
