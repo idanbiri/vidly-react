@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import _ from "lodash";
 import CommentItem from "./CommentItem";
+import AddCommentForm from "./AddCommentForm";
 import vidly from "../apis/index";
 import "../styles/Comments.css";
 
@@ -18,6 +19,10 @@ const Comments = ({ movieId }) => {
   const commentDelete = commentId => {
     const newComments = _.reject(comments, { _id: commentId });
     setComments(newComments);
+  };
+
+  const addNewComment = newComment => {
+    setComments(_.concat(comments, newComment));
   };
   const renderComments = () => {
     if (!comments) {
@@ -37,6 +42,7 @@ const Comments = ({ movieId }) => {
     <>
       <h5 className="comments-title">Comments</h5>
       {renderComments()}
+      <AddCommentForm movieId={movieId} addNewComment={addNewComment} />
     </>
   );
 };

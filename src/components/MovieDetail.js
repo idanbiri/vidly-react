@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Comments from "./Comments";
 import Likes from "./Likes";
+import AddCommentBtn from "./AddCommentBtn";
 import vidly from "../apis/index";
 import "../styles/MovieDetail.css";
 
@@ -36,6 +37,9 @@ const MovieDetail = props => {
       </div>
       <div className="movie-detail-likes">
         <Likes movieId={props.match.params.movieId} />
+      </div>
+      <div className="movie-detail-btns">
+        <AddCommentBtn />
       </div>
     </div>
   );
