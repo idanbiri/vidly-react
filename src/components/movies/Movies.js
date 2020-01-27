@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import vidly from "../../apis/index";
 import MovieItem from "./MovieItem";
-import "../../styles/Movies.css";
+import "../../styles/movies/Movies.css";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);

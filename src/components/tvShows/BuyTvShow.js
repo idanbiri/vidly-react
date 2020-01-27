@@ -3,7 +3,7 @@ import UserStatusContext from "../../contexts/UserStatus";
 import vidly from "../../apis/index";
 import "../../styles/movies/BuyMovie.css";
 
-const BuyMovie = ({ movieId }) => {
+const BuyTvShow = ({ tvShowId }) => {
   const { userStatus } = useContext(UserStatusContext);
 
   const renderBuyBtn = () => {
@@ -20,10 +20,10 @@ const BuyMovie = ({ movieId }) => {
 
   const onClickBuyBtn = async () => {
     await vidly.post("/transactions", {
-      movieId
+      tvShowId
     });
   };
   return <>{renderBuyBtn()}</>;
 };
 
-export default BuyMovie;
+export default BuyTvShow;

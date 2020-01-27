@@ -4,7 +4,7 @@ import AddCommentFormContext from "../../contexts/ShowAddCommentForm";
 import vidly from "../../apis/index";
 import "../../styles/movies/AddCommentForm.css";
 
-const AddCommentForm = ({ movieId, addNewComment }) => {
+const AddCommentForm = ({ tvShowId, addNewComment }) => {
   const [comment, setComment] = useState("");
   const { displayForm, onChangeDisplayForm } = useContext(
     AddCommentFormContext
@@ -12,7 +12,7 @@ const AddCommentForm = ({ movieId, addNewComment }) => {
   const onFormSubmit = async e => {
     e.preventDefault();
     const newComment = {
-      movieId,
+      tvShowId,
       content: comment
     };
     const { data } = await vidly.post("/comments", newComment);

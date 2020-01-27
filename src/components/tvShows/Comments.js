@@ -5,14 +5,14 @@ import AddCommentForm from "./AddCommentForm";
 import vidly from "../../apis/index";
 import "../../styles/movies/Comments.css";
 
-const Comments = ({ movieId }) => {
+const Comments = ({ tvShowId }) => {
   const [comments, setComments] = useState([]);
   useEffect(() => {
     fetchComments();
   }, []);
 
   const fetchComments = async () => {
-    const { data } = await vidly.get(`/movies/${movieId}`);
+    const { data } = await vidly.get(`/tvShows/${tvShowId}`);
     setComments(data.comments);
   };
 
@@ -42,7 +42,7 @@ const Comments = ({ movieId }) => {
     <>
       <h5 className="comments-title">Comments</h5>
       {renderComments()}
-      <AddCommentForm movieId={movieId} addNewComment={addNewComment} />
+      <AddCommentForm tvShowId={tvShowId} addNewComment={addNewComment} />
     </>
   );
 };

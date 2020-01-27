@@ -5,6 +5,8 @@ import Header from "./Header";
 import Login from "./Login";
 import Movies from "./movies/Movies";
 import MovieDetail from "./movies/MovieDetail";
+import TvShows from "./tvShows/TvShows";
+import TvShowDetail from "./tvShows/TvShowDetail";
 import HomePage from "./HomePage";
 import history from "../history";
 import { UserStatusProvider } from "../contexts/UserStatus";
@@ -28,6 +30,12 @@ const App = () => {
                   <Route path="/" exact component={HomePage} />
                   <Route path="/login" exact component={Login} />
                   <Route path="/movies" exact component={Movies} />
+                  <Route path="/tv-shows" exact component={TvShows} />
+                  <Route
+                    path="/tv-show/:tvShowId"
+                    exact
+                    component={TvShowDetail}
+                  />
                   <Route path="/movie/:movieId" exact component={MovieDetail} />
                 </Switch>
               </div>

@@ -5,7 +5,7 @@ import UserStatusContext from "../../contexts/UserStatus";
 import vidly from "../../apis/index";
 import "../../styles/movies/Likes.css";
 
-const Likes = ({ movieId }) => {
+const Likes = ({ tvShowId }) => {
   const { userInfo } = useContext(UserInfoContext);
   const { userStatus } = useContext(UserStatusContext);
   const [likes, setLikes] = useState([]);
@@ -48,20 +48,20 @@ const Likes = ({ movieId }) => {
 
   const onDislikeBtnClick = async () => {
     if (_.includes(likes, userInfo._id)) {
-      await vidly.delete(`/likes/${movieId}`);
+      await vidly.delete(`/likes/${tvShowId}`);
       setLikeCount(likeCount--);
     }
   };
 
   const onLikeBtnClick = async () => {
     if (!_.includes(likes, userInfo._id)) {
-      await vidly.post(`/likes/${movieId}`);
+      await vidly.post(`/likes/${tvShowId}`);
       setLikeCount(likeCount++);
     }
   };
 
   const fetchLikes = async () => {
-    const { data } = await vidly.get(`/movies/${movieId}`);
+    const { data } = await vidly.get(`/tvShows/${tvShowId}`);
     setLikes(data.likes);
     setLikeCount(data.likeCount);
   };
