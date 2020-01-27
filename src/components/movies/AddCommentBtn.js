@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
-import UserStatusContext from "../contexts/UserStatus";
-import AddCommentFormContext from "../contexts/ShowAddCommentForm";
-import "../styles/AddCommentBtn.css";
+import UserStatusContext from "../../contexts/UserStatus";
+import AddCommentFormContext from "../../contexts/ShowAddCommentForm";
+import "../../styles/AddCommentBtn.css";
 
 const AddCommentBtn = () => {
   const { userStatus } = useContext(UserStatusContext);

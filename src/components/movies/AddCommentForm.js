@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import _ from "lodash";
-import AddCommentFormContext from "../contexts/ShowAddCommentForm";
-import vidly from "../apis/index";
-import "../styles/AddCommentForm.css";
+import AddCommentFormContext from "../../contexts/ShowAddCommentForm";
+import vidly from "../../apis/index";
+import "../../styles/AddCommentForm.css";
 
 const AddCommentForm = ({ movieId, addNewComment }) => {
   const [comment, setComment] = useState("");

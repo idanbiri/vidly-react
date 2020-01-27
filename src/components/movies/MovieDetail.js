@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import Comments from "./Comments";
 import Likes from "./Likes";
 import AddCommentBtn from "./AddCommentBtn";
-import vidly from "../apis/index";
-import "../styles/MovieDetail.css";
+import BuyMovie from "./BuyMovie";
+import vidly from "../../apis/index";
+import "../../styles/MovieDetail.css";
 
 const MovieDetail = props => {
   const [movie, setMovie] = useState({});
@@ -40,6 +41,7 @@ const MovieDetail = props => {
       </div>
       <div className="movie-detail-btns">
         <AddCommentBtn />
+        <BuyMovie movieId={props.match.params.movieId} />
       </div>
     </div>
   );

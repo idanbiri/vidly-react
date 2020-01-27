@@ -3,8 +3,8 @@ import { Router, Route, Switch } from "react-router-dom";
 
 import Header from "./Header";
 import Login from "./Login";
-import Movies from "./Movies";
-import MovieDetail from "./MovieDetail";
+import Movies from "./movies/Movies";
+import MovieDetail from "./movies/MovieDetail";
 import HomePage from "./HomePage";
 import history from "../history";
 import { UserStatusProvider } from "../contexts/UserStatus";

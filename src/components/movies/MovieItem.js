@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/MovieItem.css";
+import "../../styles/MovieItem.css";
 
 const MovieItem = ({ movie }) => {
   return (

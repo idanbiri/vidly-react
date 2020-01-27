@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import _ from "lodash";
 import CommentItem from "./CommentItem";
 import AddCommentForm from "./AddCommentForm";
-import vidly from "../apis/index";
-import "../styles/Comments.css";
+import vidly from "../../apis/index";
+import "../../styles/Comments.css";
 
 const Comments = ({ movieId }) => {
   const [comments, setComments] = useState([]);

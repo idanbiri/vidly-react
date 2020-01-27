@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useContext } from "react";
 import _ from "lodash";
-import UserInfoContext from "../contexts/UserInfo";
-import UserStatusContext from "../contexts/UserStatus";
-import vidly from "../apis/index";
-import "../styles/Likes.css";
+import UserInfoContext from "../../contexts/UserInfo";
+import UserStatusContext from "../../contexts/UserStatus";
+import vidly from "../../apis/index";
+import "../../styles/Likes.css";
 
 const Likes = ({ movieId }) => {
   const { userInfo } = useContext(UserInfoContext);

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import UserInfoContext from "../contexts/UserInfo";
-import vidly from "../apis/index";
-import "../styles/CommentItem.css";
+import UserInfoContext from "../../contexts/UserInfo";
+import vidly from "../../apis/index";
+import "../../styles/CommentItem.css";
 
 const CommentItem = ({ comment, commentDelete }) => {
   const { userInfo } = useContext(UserInfoContext);
