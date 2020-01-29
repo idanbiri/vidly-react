@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
 import vidly from "../apis/index";
 import { setAccessToken } from "../services/LocalStorageService";
 import { parseJwt } from "../services/JwtService";
@@ -8,19 +7,23 @@ import UserInfoContext from "../contexts/UserInfo";
 import history from "../history";
 import "../styles/Login.css";
 
-const Login = () => {
+const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
   const { onChangeUserStatus } = useContext(UserStatusContext);
   const { onChangeUserInfo } = useContext(UserInfoContext);
 
   const onFormSubmit = async e => {
     e.preventDefault();
-    const loginObj = {
+    const signUpObj = {
       email,
-      password
+      password,
+      name,
+      phone
     };
-    const { data: accToken } = await vidly.post("/auth", loginObj);
+    const { data: accToken } = await vidly.post("/users", signUpObj);
     if (accToken) {
       setAccessToken(accToken);
       onChangeUserStatus(true);
@@ -32,7 +35,7 @@ const Login = () => {
 
   return (
     <form className="login-form" onSubmit={onFormSubmit}>
-      <h1>Login</h1>
+      <h1>Sign-up</h1>
       <input
         type="text"
         placeholder="Email"
@@ -51,10 +54,27 @@ const Login = () => {
         }}
         value={password}
       />
+      <input
+        type="text"
+        placeholder="Name"
+        required
+        onChange={e => {
+          setName(e.target.value);
+        }}
+        value={name}
+      />
+      <input
+        type="text"
+        placeholder="Phone"
+        required
+        onChange={e => {
+          setPhone(e.target.value);
+        }}
+        value={phone}
+      />
       <input type="submit" placeholder="Email" />
-      <Link to="/sign-up">Sign-up</Link>
     </form>
   );
 };
 
-export default Login;
+export default SignUp;

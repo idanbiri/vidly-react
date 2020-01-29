@@ -3,6 +3,7 @@ import { Router, Route, Switch } from "react-router-dom";
 
 import Header from "./Header";
 import Login from "./Login";
+import SignUp from "./SignUp";
 import Movies from "./movies/Movies";
 import MovieDetail from "./movies/MovieDetail";
 import TvShows from "./tvShows/TvShows";
@@ -29,6 +30,7 @@ const App = () => {
                 <Switch>
                   <Route path="/" exact component={HomePage} />
                   <Route path="/login" exact component={Login} />
+                  <Route path="/sign-up" exact component={SignUp} />
                   <Route path="/movies" exact component={Movies} />
                   <Route path="/tv-shows" exact component={TvShows} />
                   <Route

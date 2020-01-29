@@ -28,9 +28,9 @@ const Header = () => {
         </ul>
       </nav>
       <LoginButton />
-      <a className="login-button" href="#">
-        <button>Signup</button>
-      </a>
+      <Link to="/sign-up" className="login-button">
+        <button>Sign-up</button>
+      </Link>
     </header>
   );
 };
