@@ -1,0 +1,10 @@
+.transactions-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.transactions-container iframe {
+  margin-top: 10px;
+}

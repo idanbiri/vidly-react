@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import UserStatusContext from "../../contexts/UserStatus";
 import vidly from "../../apis/index";
+import history from "../../history";
 import "../../styles/movies/BuyMovie.css";
 
 const BuyTvShow = ({ tvShowId }) => {
@@ -22,6 +23,7 @@ const BuyTvShow = ({ tvShowId }) => {
     await vidly.post("/transactions", {
       tvShowId
     });
+    history.push("/transactions");
   };
   return <>{renderBuyBtn()}</>;
 };

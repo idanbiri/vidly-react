@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LoginButton from "./LoginButton";
+import TransactionBtn from "./TransactionBtn";
 import "../styles/Header.css";
 
 const Header = () => {
@@ -23,7 +24,7 @@ const Header = () => {
             <Link to="/tv-shows">Tvshows</Link>
           </li>
           <li>
-            <a>Transactions</a>
+            <TransactionBtn />
           </li>
         </ul>
       </nav>

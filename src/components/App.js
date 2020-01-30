@@ -9,12 +9,14 @@ import MovieDetail from "./movies/MovieDetail";
 import TvShows from "./tvShows/TvShows";
 import TvShowDetail from "./tvShows/TvShowDetail";
 import HomePage from "./HomePage";
+import Transactions from "./Transactions";
 import history from "../history";
 import { UserStatusProvider } from "../contexts/UserStatus";
 import { UserInfoProvider } from "../contexts/UserInfo";
 import { AddCommentFormProvider } from "../contexts/ShowAddCommentForm";
 
 import "../styles/App.css";
+import TransactionBtn from "./TransactionBtn";
 
 const App = () => {
   return (
@@ -33,6 +35,7 @@ const App = () => {
                   <Route path="/sign-up" exact component={SignUp} />
                   <Route path="/movies" exact component={Movies} />
                   <Route path="/tv-shows" exact component={TvShows} />
+                  <Route path="/transactions" exact component={Transactions} />
                   <Route
                     path="/tv-show/:tvShowId"
                     exact
