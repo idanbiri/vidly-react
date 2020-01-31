@@ -1,17 +1,28 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import queryString from "query-string";
 import vidly from "../../apis/index";
 import MovieItem from "./MovieItem";
 import "../../styles/movies/Movies.css";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
+  const { search } = useLocation();
+  const queryParams = queryString.parse(search);
+
   useEffect(() => {
     fetchMovies();
   }, []);
 
   const fetchMovies = async () => {
-    const { data } = await vidly.get("/movies");
-    setMovies(data);
+    if (!queryParams.genre) {
+      const { data } = await vidly.get("/movies");
+      setMovies(data);
+    } else {
+      const stringified = queryString.stringify(queryParams);
+      const { data } = await vidly.get(`/movies?${stringified}`);
+      setMovies(data);
+    }
   };
 
   const renderMovies = () => {
