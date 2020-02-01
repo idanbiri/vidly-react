@@ -34,6 +34,8 @@ header {
 }
 
 .nav-links li {
+  line-height: 40px;
+  text-align: center;
   display: inline-block;
   padding: 0px 20px;
 }
@@ -57,4 +59,12 @@ button {
 
 button:hover {
   background-color: rgba(0, 136, 169, 0.8);
+}
+
+.nav-links li ul li {
+  display: none;
+}
+
+.nav-links li:hover ul li {
+  display: block;
 }

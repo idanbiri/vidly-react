@@ -12,7 +12,7 @@ const TvShows = () => {
 
   useEffect(() => {
     fetchTvShows();
-  }, []);
+  }, [queryParams]);
 
   const fetchTvShows = async () => {
     if (!queryParams.genre) {

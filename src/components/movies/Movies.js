@@ -12,7 +12,7 @@ const Movies = () => {
 
   useEffect(() => {
     fetchMovies();
-  }, []);
+  }, [queryParams]);
 
   const fetchMovies = async () => {
     if (!queryParams.genre) {

@@ -10,7 +10,7 @@ const TvShowDetail = props => {
   const [tvShow, setTvShow] = useState({});
   useEffect(() => {
     fetchTvShow();
-  }, []);
+  }, [props.match.params.tvShowId]);
 
   const fetchTvShow = async () => {
     const { data } = await vidly.get(`/tvShows/${props.match.params.tvShowId}`);

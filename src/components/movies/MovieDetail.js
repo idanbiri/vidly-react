@@ -10,7 +10,7 @@ const MovieDetail = props => {
   const [movie, setMovie] = useState({});
   useEffect(() => {
     fetchMovie();
-  }, []);
+  }, [props.match.params.movieId]);
 
   const fetchMovie = async () => {
     const { data } = await vidly.get(`/movies/${props.match.params.movieId}`);

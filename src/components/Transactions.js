@@ -17,7 +17,7 @@ const Transactions = () => {
 
   const renderTransactions = () => {
     return transactions.map(trans => {
-      return <TransactionItem transaction={trans} />;
+      return <TransactionItem transaction={trans} key={trans._id} />;
     });
   };
 

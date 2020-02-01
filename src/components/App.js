@@ -16,7 +16,6 @@ import { UserInfoProvider } from "../contexts/UserInfo";
 import { AddCommentFormProvider } from "../contexts/ShowAddCommentForm";
 
 import "../styles/App.css";
-import TransactionBtn from "./TransactionBtn";
 
 const App = () => {
   return (

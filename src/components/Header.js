@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LoginButton from "./LoginButton";
 import TransactionBtn from "./TransactionBtn";
+import SubMenu from "./SubMenu";
+import SearchBar from "./SearchBar";
 import "../styles/Header.css";
 
 const Header = () => {
@@ -15,13 +17,16 @@ const Header = () => {
           alt="batman logo"
         />
       </Link>
+      <SearchBar />
       <nav>
         <ul className="nav-links">
           <li>
             <Link to="/movies">Movies</Link>
+            <SubMenu category={"movies"} />
           </li>
           <li>
             <Link to="/tv-shows">Tvshows</Link>
+            <SubMenu category={"tv-shows"} />
           </li>
           <li>
             <TransactionBtn />
