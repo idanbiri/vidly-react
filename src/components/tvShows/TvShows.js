@@ -33,7 +33,6 @@ const TvShows = () => {
 
   return (
     <>
-      <h2 className="movies-header">Tv-Shows</h2>
       <ul className="movies-container">{renderTvShows()}</ul>
     </>
   );

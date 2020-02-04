@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Comments from "./Comments";
 import Likes from "./Likes";
 import AddCommentBtn from "./AddCommentBtn";
+import TvShowRatings from "./TvShowRatings";
 import BuyTvShow from "./BuyTvShow";
 import vidly from "../../apis/index";
 import "../../styles/movies/MovieDetail.css";
@@ -27,8 +28,10 @@ const TvShowDetail = props => {
   return (
     <div className="movie-detail-container">
       <div className="movie-detail-header">
-        <h3>Title: {tvShow.title}</h3>
-        <h4>Genre: {renderGenreName()}</h4>
+        <h1>
+          {tvShow.title}
+          <span>{` (${renderGenreName()})`}</span>
+        </h1>
       </div>
       <div className="movie-detail-img">
         <img src={tvShow.image} alt="movie img" />
@@ -43,6 +46,7 @@ const TvShowDetail = props => {
         <AddCommentBtn />
         <BuyTvShow tvShowId={props.match.params.tvShowId} />
       </div>
+      <TvShowRatings ratings={tvShow.ratings} plot={tvShow.plot} />
     </div>
   );
 };

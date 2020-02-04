@@ -14,7 +14,11 @@ const AddCommentBtn = () => {
         </button>
       );
     }
-    return <button className="add-comment-btn">Add comment</button>;
+    return (
+      <button className="add-comment-btn" disabled>
+        Add comment
+      </button>
+    );
   };
 
   const onBtnClick = () => {

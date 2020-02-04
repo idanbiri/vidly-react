@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
+
 .movie-detail-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 2fr 3fr;
   grid-template-rows: 10% 30% 10% auto;
   height: 100%;
+  padding-top: 65px;
 }
 
 .movie-detail-header {
@@ -11,18 +14,19 @@
   grid-column-end: 4;
 }
 
-.movie-detail-header h3 {
-  font-family: "Fruktur", cursive;
-  font-size: 40px;
+.movie-detail-header h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 50px;
   font-weight: 500;
-  color: white;
+  color: black;
+  padding-top: 25px;
 }
 
-.movie-detail-header h4 {
-  font-family: "Fruktur", cursive;
+.movie-detail-header h1 span {
+  font-family: "Anton", sans-serif;
   font-size: 30px;
   font-weight: 500;
-  color: linear-gradient(to right, #000000, #434343);
+  color: rgba(29, 28, 28, 0.849);
   margin: 2px;
 }
 
@@ -69,4 +73,30 @@
   grid-row-end: 4;
   grid-column-start: 2;
   grid-column-end: 3;
+}
+
+.movie-rating-plot-container {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.movie-rating-plot-container span {
+  font-size: 25px;
+  font-weight: 500;
+  color: black;
+}
+
+.movie-rating-plot-container .rating-container {
+  font-size: 15px;
+  font-weight: 300;
+  color: blue;
+}
+
+.movie-rating-plot-container p {
+  font-size: 17px;
+  line-height: 30px;
+  color: darkblue;
+  padding: 2px 15px;
 }

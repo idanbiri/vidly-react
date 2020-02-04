@@ -33,7 +33,6 @@ const Movies = () => {
 
   return (
     <>
-      <h2 className="movies-header">Movies</h2>
       <ul className="movies-container">{renderMovies()}</ul>
     </>
   );

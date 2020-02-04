@@ -24,13 +24,9 @@ const SearchBar = () => {
   };
 
   return (
-    <form onSubmit={onFormSubmit}>
-      <input
-        id="search-bar"
-        placeholder="Search"
-        type="text"
-        ref={searchTerm}
-      />
+    <form onSubmit={onFormSubmit} className="search-bar-form">
+      <input id="search-bar" type="text" ref={searchTerm} />
+      <button className="search-btn">🔎</button>
     </form>
   );
 };

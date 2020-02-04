@@ -40,7 +40,6 @@ const Comments = ({ tvShowId }) => {
   };
   return (
     <>
-      <h5 className="comments-title">Comments</h5>
       {renderComments()}
       <AddCommentForm tvShowId={tvShowId} addNewComment={addNewComment} />
     </>

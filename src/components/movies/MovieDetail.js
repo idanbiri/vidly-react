@@ -3,8 +3,10 @@ import Comments from "./Comments";
 import Likes from "./Likes";
 import AddCommentBtn from "./AddCommentBtn";
 import BuyMovie from "./BuyMovie";
+import MovieRatings from "./MovieRatings";
 import vidly from "../../apis/index";
 import "../../styles/movies/MovieDetail.css";
+import MovieRating from "./MovieRatings";
 
 const MovieDetail = props => {
   const [movie, setMovie] = useState({});
@@ -27,8 +29,10 @@ const MovieDetail = props => {
   return (
     <div className="movie-detail-container">
       <div className="movie-detail-header">
-        <h3>Title: {movie.title}</h3>
-        <h4>Genre: {renderGenreName()}</h4>
+        <h1>
+          {movie.title}
+          <span>{` (${renderGenreName()})`}</span>
+        </h1>
       </div>
       <div className="movie-detail-img">
         <img src={movie.image} alt="movie img" />
@@ -43,6 +47,7 @@ const MovieDetail = props => {
         <AddCommentBtn />
         <BuyMovie movieId={props.match.params.movieId} />
       </div>
+      <MovieRating ratings={movie.ratings} plot={movie.plot} />
     </div>
   );
 };

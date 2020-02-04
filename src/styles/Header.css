@@ -13,7 +13,7 @@ button {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  color: #edf0f1;
+  color: black;
   text-decoration: none;
 }
 
@@ -31,10 +31,11 @@ header {
 
 .nav-links {
   list-style: none;
+  position: relative;
 }
 
 .nav-links li {
-  line-height: 40px;
+  line-height: 30px;
   text-align: center;
   display: inline-block;
   padding: 0px 20px;
@@ -50,7 +51,7 @@ header {
 
 button {
   padding: 9px 25px;
-  background-color: rgba(0, 136, 169, 1);
+  background-color: black;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -65,6 +66,43 @@ button:hover {
   display: none;
 }
 
+.nav-links li ul {
+  position: absolute;
+}
+
 .nav-links li:hover ul li {
   display: block;
+}
+
+#search-bar {
+  border-radius: 40px;
+  border: 2px solid black;
+  width: 200px;
+  height: 25px;
+  color: white;
+}
+
+.search-btn {
+  padding: 5px;
+  background: none;
+}
+
+.search-btn:hover {
+  background: none;
+}
+
+.search-bar-form {
+  margin-right: auto;
+}
+
+.login-button button {
+  color: white;
+}
+
+.login-button {
+  color: white;
+}
+
+.sign-up-btn {
+  margin-left: 5px;
 }

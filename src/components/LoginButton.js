@@ -10,7 +10,11 @@ const LoginButton = () => {
 
   const renderButton = () => {
     if (userStatus) {
-      return <button onClick={onLogoutButtonClick}>Logout</button>;
+      return (
+        <button onClick={onLogoutButtonClick} className="login-button">
+          Logout
+        </button>
+      );
     }
     return (
       <>
