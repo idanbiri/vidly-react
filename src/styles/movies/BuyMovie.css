@@ -4,3 +4,8 @@
   margin-left: 5px;
   color: white;
 }
+
+.buy-movie-btn.disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}

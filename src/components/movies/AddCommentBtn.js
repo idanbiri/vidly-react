@@ -15,7 +15,7 @@ const AddCommentBtn = () => {
       );
     }
     return (
-      <button className="add-comment-btn" disabled>
+      <button className="add-comment-btn disabled" disabled>
         Add comment
       </button>
     );

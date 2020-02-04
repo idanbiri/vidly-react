@@ -5,3 +5,8 @@
   margin-left: 10px;
   color: white;
 }
+
+.add-comment-btn.disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}

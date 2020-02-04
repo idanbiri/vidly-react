@@ -16,7 +16,22 @@ const Likes = ({ tvShowId }) => {
   }, [likeCount]);
 
   const renderButtons = () => {
-    if (userStatus) {
+    if (userStatus && !_.includes(likes, userInfo._id)) {
+      return (
+        <>
+          <img
+            onClick={onDislikeBtnClick}
+            src="https://image.flaticon.com/icons/svg/889/889220.svg"
+            className="dislike-img disabled"
+          />
+          <img
+            onClick={onLikeBtnClick}
+            className="like-img"
+            src="https://image.flaticon.com/icons/svg/889/889221.svg"
+          />
+        </>
+      );
+    } else if (userStatus && _.includes(likes, userInfo._id)) {
       return (
         <>
           <img
@@ -26,24 +41,25 @@ const Likes = ({ tvShowId }) => {
           />
           <img
             onClick={onLikeBtnClick}
-            className="like-img"
+            className="like-img disabled"
+            src="https://image.flaticon.com/icons/svg/889/889221.svg"
+          />
+        </>
+      );
+    } else {
+      return (
+        <>
+          <img
+            src="https://image.flaticon.com/icons/svg/889/889220.svg"
+            className="dislike-img disabled"
+          />
+          <img
+            className="like-img disabled"
             src="https://image.flaticon.com/icons/svg/889/889221.svg"
           />
         </>
       );
     }
-    return (
-      <>
-        <img
-          src="https://image.flaticon.com/icons/svg/889/889220.svg"
-          className="dislike-img"
-        />
-        <img
-          className="like-img"
-          src="https://image.flaticon.com/icons/svg/889/889221.svg"
-        />
-      </>
-    );
   };
 
   const onDislikeBtnClick = async () => {

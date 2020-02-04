@@ -15,7 +15,11 @@ const BuyMovie = ({ movieId }) => {
         </button>
       );
     } else {
-      return <button className="buy-movie-btn">Buy</button>;
+      return (
+        <button className="buy-movie-btn disabled" disabled>
+          Buy
+        </button>
+      );
     }
   };
 
