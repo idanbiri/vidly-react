@@ -4,36 +4,84 @@ import "../styles/HomePage.css";
 const HomePage = () => {
   return (
     <>
-      <h1 className="main-title">$treamy</h1>
-      <div className="slidershow middle">
-        <div className="slides">
-          <input type="radio" name="r" id="r1" checked readOnly />
-          <input type="radio" name="r" id="r2" />
-          <input type="radio" name="r" id="r3" />
-          <input type="radio" name="r" id="r4" />
-          <input type="radio" name="r" id="r5" />
-          <div className="slide s1">
-            <img src="https://wallpaperaccess.com/thumb/172154.jpg" />
+      <div class="container">
+        <div id="content-slider">
+          <div id="slider">
+            <div id="mask">
+              <ul>
+                <li id="first" class="firstanimation">
+                  <a href="#">
+                    {" "}
+                    <img
+                      src="https://wallpaperaccess.com/thumb/977057.jpg"
+                      alt="Cougar"
+                    />{" "}
+                  </a>
+                  <div class="tooltip">
+                    {" "}
+                    <h1>Cougar</h1>{" "}
+                  </div>
+                </li>
+
+                <li id="second" class="secondanimation">
+                  <a href="#">
+                    {" "}
+                    <img
+                      src="https://wallpaperaccess.com/thumb/97430.jpg"
+                      alt="Lions"
+                    />{" "}
+                  </a>
+                  <div class="tooltip">
+                    {" "}
+                    <h1>Lions</h1>{" "}
+                  </div>
+                </li>
+
+                <li id="third" class="thirdanimation">
+                  <a href="#">
+                    {" "}
+                    <img
+                      src="https://wallpaperaccess.com/thumb/82941.jpg"
+                      alt="Snowalker"
+                    />{" "}
+                  </a>
+                  <div class="tooltip">
+                    {" "}
+                    <h1>Snowalker</h1>{" "}
+                  </div>
+                </li>
+
+                <li id="fourth" class="fourthanimation">
+                  <a href="#">
+                    {" "}
+                    <img
+                      src="https://wallpaperaccess.com/thumb/234772.jpg"
+                      alt="Howling"
+                    />{" "}
+                  </a>
+                  <div class="tooltip">
+                    {" "}
+                    <h1>Howling</h1>{" "}
+                  </div>
+                </li>
+
+                <li id="fifth" class="fifthanimation">
+                  <a href="#">
+                    {" "}
+                    <img
+                      src="https://wallpaperaccess.com/thumb/464866.jpg"
+                      alt="Sunbathing"
+                    />{" "}
+                  </a>
+                  <div class="tooltip">
+                    {" "}
+                    <h1>Sunbathing</h1>{" "}
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="progress-bar"></div>
           </div>
-          <div className="slide">
-            <img src="https://wallpaperaccess.com/thumb/197277.jpg" />
-          </div>
-          <div className="slide">
-            <img src="https://wallpaperaccess.com/thumb/320.jpg" />
-          </div>
-          <div className="slide">
-            <img src="https://wallpaperaccess.com/thumb/234772.jpg" />
-          </div>
-          <div className="slide">
-            <img src="https://wallpaperaccess.com/thumb/293977.jpg" />
-          </div>
-        </div>
-        <div className="navigation">
-          <label htmlFor="r1" className="bar"></label>
-          <label htmlFor="r2" className="bar"></label>
-          <label htmlFor="r3" className="bar"></label>
-          <label htmlFor="r4" className="bar"></label>
-          <label htmlFor="r5" className="bar"></label>
         </div>
       </div>
     </>
