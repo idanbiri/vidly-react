@@ -10,15 +10,19 @@ const AddCommentForm = ({ tvShowId, addNewComment }) => {
     AddCommentFormContext
   );
   const onFormSubmit = async e => {
-    e.preventDefault();
-    const newComment = {
-      tvShowId,
-      content: comment
-    };
-    const { data } = await vidly.post("/comments", newComment);
-    const { comments } = data;
-    addNewComment(_.last(comments));
-    onChangeDisplayForm("none");
+    try {
+      e.preventDefault();
+      const newComment = {
+        tvShowId,
+        content: comment
+      };
+      const { data } = await vidly.post("/comments", newComment);
+      const { comments } = data;
+      addNewComment(_.last(comments));
+      onChangeDisplayForm("none");
+    } catch (ex) {
+      console.log(ex);
+    }
   };
   return (
     <form onSubmit={onFormSubmit} style={{ display: displayForm }}>

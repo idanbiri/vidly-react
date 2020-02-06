@@ -3,7 +3,7 @@ import "../styles/HomePage.css";
 
 const HomePage = () => {
   return (
-    <>
+    <div className="homepage-container">
       <div class="container">
         <div id="content-slider">
           <div id="slider">
@@ -84,7 +84,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

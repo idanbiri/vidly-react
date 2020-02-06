@@ -10,6 +10,7 @@ import TvShows from "./tvShows/TvShows";
 import TvShowDetail from "./tvShows/TvShowDetail";
 import HomePage from "./HomePage";
 import Transactions from "./Transactions";
+import Errors from "./Errors";
 import history from "../history";
 import { UserStatusProvider } from "../contexts/UserStatus";
 import { UserInfoProvider } from "../contexts/UserInfo";
@@ -35,6 +36,7 @@ const App = () => {
                   <Route path="/movies" exact component={Movies} />
                   <Route path="/tv-shows" exact component={TvShows} />
                   <Route path="/transactions" exact component={Transactions} />
+                  <Route path="/error/:code" exact component={Errors} />
                   <Route
                     path="/tv-show/:tvShowId"
                     exact

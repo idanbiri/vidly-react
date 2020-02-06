@@ -21,12 +21,16 @@ const Login = () => {
       password
     };
     const { data: accToken } = await vidly.post("/auth", loginObj);
-    if (accToken) {
-      setAccessToken(accToken);
-      onChangeUserStatus(true);
-      const userInfo = parseJwt(accToken);
-      onChangeUserInfo(userInfo);
-      history.push("/");
+    try {
+      if (accToken) {
+        setAccessToken(accToken);
+        onChangeUserStatus(true);
+        const userInfo = parseJwt(accToken);
+        onChangeUserInfo(userInfo);
+        history.push("/");
+      }
+    } catch (ex) {
+      console.log(ex);
     }
   };
 

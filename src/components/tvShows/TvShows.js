@@ -15,13 +15,17 @@ const TvShows = () => {
   }, [queryParams]);
 
   const fetchTvShows = async () => {
-    if (!queryParams.genre) {
-      const { data } = await vidly.get("/tvShows");
-      setTvShows(data);
-    } else {
-      const stringified = queryString.stringify(queryParams);
-      const { data } = await vidly.get(`/tvShows?${stringified}`);
-      setTvShows(data);
+    try {
+      if (!queryParams.genre) {
+        const { data } = await vidly.get("/tvShows");
+        setTvShows(data);
+      } else {
+        const stringified = queryString.stringify(queryParams);
+        const { data } = await vidly.get(`/tvShows?${stringified}`);
+        setTvShows(data);
+      }
+    } catch (ex) {
+      console.log(ex);
     }
   };
 

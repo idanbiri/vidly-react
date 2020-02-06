@@ -63,23 +63,35 @@ const Likes = ({ movieId }) => {
   };
 
   const onDislikeBtnClick = async () => {
-    if (_.includes(likes, userInfo._id)) {
-      await vidly.delete(`/likes/${movieId}`);
-      setLikeCount(likeCount--);
+    try {
+      if (_.includes(likes, userInfo._id)) {
+        await vidly.delete(`/likes/${movieId}`);
+        setLikeCount(likeCount--);
+      }
+    } catch (ex) {
+      console.log(ex);
     }
   };
 
   const onLikeBtnClick = async () => {
-    if (!_.includes(likes, userInfo._id)) {
-      await vidly.post(`/likes/${movieId}`);
-      setLikeCount(likeCount++);
+    try {
+      if (!_.includes(likes, userInfo._id)) {
+        await vidly.post(`/likes/${movieId}`);
+        setLikeCount(likeCount++);
+      }
+    } catch (ex) {
+      console.log(ex);
     }
   };
 
   const fetchLikes = async () => {
-    const { data } = await vidly.get(`/movies/${movieId}`);
-    setLikes(data.likes);
-    setLikeCount(data.likeCount);
+    try {
+      const { data } = await vidly.get(`/movies/${movieId}`);
+      setLikes(data.likes);
+      setLikeCount(data.likeCount);
+    } catch (ex) {
+      console.log(ex);
+    }
   };
 
   return (

@@ -15,13 +15,17 @@ const Movies = () => {
   }, [queryParams]);
 
   const fetchMovies = async () => {
-    if (!queryParams.genre) {
-      const { data } = await vidly.get("/movies");
-      setMovies(data);
-    } else {
-      const stringified = queryString.stringify(queryParams);
-      const { data } = await vidly.get(`/movies?${stringified}`);
-      setMovies(data);
+    try {
+      if (!queryParams.genre) {
+        const { data } = await vidly.get("/movies");
+        setMovies(data);
+      } else {
+        const stringified = queryString.stringify(queryParams);
+        const { data } = await vidly.get(`/movies?${stringified}`);
+        setMovies(data);
+      }
+    } catch (ex) {
+      console.log(ex);
     }
   };
 

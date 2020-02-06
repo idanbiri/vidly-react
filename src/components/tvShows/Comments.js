@@ -12,8 +12,12 @@ const Comments = ({ tvShowId }) => {
   }, []);
 
   const fetchComments = async () => {
-    const { data } = await vidly.get(`/tvShows/${tvShowId}`);
-    setComments(data.comments);
+    try {
+      const { data } = await vidly.get(`/tvShows/${tvShowId}`);
+      setComments(data.comments);
+    } catch (ex) {
+      console.log(ex);
+    }
   };
 
   const commentDelete = commentId => {

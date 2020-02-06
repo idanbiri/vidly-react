@@ -12,8 +12,12 @@ const CommentItem = ({ comment, commentDelete }) => {
     return null;
   };
   const onClickDeleteBtn = async () => {
-    await vidly.delete(`/comments/${comment._id}`);
-    commentDelete(comment._id);
+    try {
+      await vidly.delete(`/comments/${comment._id}`);
+      commentDelete(comment._id);
+    } catch (ex) {
+      console.log(ex);
+    }
   };
 
   return (

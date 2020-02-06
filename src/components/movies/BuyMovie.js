@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import UserStatusContext from "../../contexts/UserStatus";
 import vidly from "../../apis/index";
 import history from "../../history";

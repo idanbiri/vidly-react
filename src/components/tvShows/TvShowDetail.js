@@ -14,8 +14,14 @@ const TvShowDetail = props => {
   }, [props.match.params.tvShowId]);
 
   const fetchTvShow = async () => {
-    const { data } = await vidly.get(`/tvShows/${props.match.params.tvShowId}`);
-    setTvShow(data);
+    try {
+      const { data } = await vidly.get(
+        `/tvShows/${props.match.params.tvShowId}`
+      );
+      setTvShow(data);
+    } catch (ex) {
+      console.log(ex);
+    }
   };
 
   const renderGenreName = () => {

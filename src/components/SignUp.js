@@ -16,20 +16,24 @@ const SignUp = () => {
   const { onChangeUserInfo } = useContext(UserInfoContext);
 
   const onFormSubmit = async e => {
-    e.preventDefault();
-    const signUpObj = {
-      email,
-      password,
-      name,
-      phone
-    };
-    const { data: accToken } = await vidly.post("/users", signUpObj);
-    if (accToken) {
-      setAccessToken(accToken);
-      onChangeUserStatus(true);
-      const userInfo = parseJwt(accToken);
-      onChangeUserInfo(userInfo);
-      history.push("/");
+    try {
+      e.preventDefault();
+      const signUpObj = {
+        email,
+        password,
+        name,
+        phone
+      };
+      const { data: accToken } = await vidly.post("/users", signUpObj);
+      if (accToken) {
+        setAccessToken(accToken);
+        onChangeUserStatus(true);
+        const userInfo = parseJwt(accToken);
+        onChangeUserInfo(userInfo);
+        history.push("/");
+      }
+    } catch (ex) {
+      console.log(ex);
     }
   };
 

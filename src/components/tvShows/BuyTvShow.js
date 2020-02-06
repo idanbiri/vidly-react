@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import UserStatusContext from "../../contexts/UserStatus";
 import vidly from "../../apis/index";
 import history from "../../history";
@@ -20,10 +20,14 @@ const BuyTvShow = ({ tvShowId }) => {
   };
 
   const onClickBuyBtn = async () => {
-    await vidly.post("/transactions", {
-      tvShowId
-    });
-    history.push("/transactions");
+    try {
+      await vidly.post("/transactions", {
+        tvShowId
+      });
+      history.push("/transactions");
+    } catch (ex) {
+      console.log(ex);
+    }
   };
   return <>{renderBuyBtn()}</>;
 };

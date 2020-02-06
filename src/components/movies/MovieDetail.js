@@ -3,10 +3,9 @@ import Comments from "./Comments";
 import Likes from "./Likes";
 import AddCommentBtn from "./AddCommentBtn";
 import BuyMovie from "./BuyMovie";
-import MovieRatings from "./MovieRatings";
+import MovieRating from "./MovieRatings";
 import vidly from "../../apis/index";
 import "../../styles/movies/MovieDetail.css";
-import MovieRating from "./MovieRatings";
 
 const MovieDetail = props => {
   const [movie, setMovie] = useState({});
@@ -15,8 +14,12 @@ const MovieDetail = props => {
   }, [props.match.params.movieId]);
 
   const fetchMovie = async () => {
-    const { data } = await vidly.get(`/movies/${props.match.params.movieId}`);
-    setMovie(data);
+    try {
+      const { data } = await vidly.get(`/movies/${props.match.params.movieId}`);
+      setMovie(data);
+    } catch (ex) {
+      console.log(ex);
+    }
   };
 
   const renderGenreName = () => {
