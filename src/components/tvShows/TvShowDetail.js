@@ -20,7 +20,7 @@ const TvShowDetail = props => {
       );
       setTvShow(data);
     } catch (ex) {
-      console.log(ex);
+      throw new Error(ex);
     }
   };
 

@@ -33,7 +33,7 @@ const SignUp = () => {
         history.push("/");
       }
     } catch (ex) {
-      console.log(ex);
+      throw new Error(ex);
     }
   };
 

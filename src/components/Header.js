@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LoginButton from "./LoginButton";
 import TransactionBtn from "./TransactionBtn";
+import AdminBtn from "./admin/AdminBtn";
 import SubMenu from "./SubMenu";
 import SearchBar from "./SearchBar";
 import "../styles/Header.css";
@@ -30,6 +31,9 @@ const Header = () => {
           </li>
           <li>
             <TransactionBtn />
+          </li>
+          <li>
+            <AdminBtn />
           </li>
         </ul>
       </nav>

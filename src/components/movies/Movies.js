@@ -25,7 +25,7 @@ const Movies = () => {
         setMovies(data);
       }
     } catch (ex) {
-      console.log(ex);
+      throw new Error(ex);
     }
   };
 

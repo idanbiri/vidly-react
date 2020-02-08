@@ -69,7 +69,7 @@ const Likes = ({ movieId }) => {
         setLikeCount(likeCount--);
       }
     } catch (ex) {
-      console.log(ex);
+      throw new Error(ex);
     }
   };
 
@@ -80,7 +80,7 @@ const Likes = ({ movieId }) => {
         setLikeCount(likeCount++);
       }
     } catch (ex) {
-      console.log(ex);
+      throw new Error(ex);
     }
   };
 
@@ -90,7 +90,7 @@ const Likes = ({ movieId }) => {
       setLikes(data.likes);
       setLikeCount(data.likeCount);
     } catch (ex) {
-      console.log(ex);
+      throw new Error(ex);
     }
   };
 

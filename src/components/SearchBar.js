@@ -23,7 +23,7 @@ const SearchBar = () => {
         history.push(`/tv-show/${_.head(tvShow)._id}`);
       }
     } catch (ex) {
-      console.log(ex);
+      throw new Error(ex);
     }
   };
 

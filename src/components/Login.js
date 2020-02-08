@@ -30,7 +30,7 @@ const Login = () => {
         history.push("/");
       }
     } catch (ex) {
-      console.log(ex);
+      throw new Error(ex);
     }
   };
 

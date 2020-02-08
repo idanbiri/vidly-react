@@ -1,0 +1,20 @@
+.admin-video-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.admin-video-container .genre {
+  font-size: 15px;
+  color: grey;
+}
+
+.admin-video-container h4 {
+  font-size: 20px;
+  width: 20%;
+}
+
+.admin-video-container button {
+  background: red;
+  padding: 5px 10px;
+}

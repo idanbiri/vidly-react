@@ -26,7 +26,7 @@ const BuyTvShow = ({ tvShowId }) => {
       });
       history.push("/transactions");
     } catch (ex) {
-      console.log(ex);
+      throw new Error(ex);
     }
   };
   return <>{renderBuyBtn()}</>;

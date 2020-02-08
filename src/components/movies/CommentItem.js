@@ -16,7 +16,7 @@ const CommentItem = ({ comment, commentDelete }) => {
       await vidly.delete(`/comments/${comment._id}`);
       commentDelete(comment._id);
     } catch (ex) {
-      console.log(ex);
+      throw new Error(ex);
     }
   };
 

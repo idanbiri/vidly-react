@@ -4,12 +4,12 @@ import "../styles/HomePage.css";
 const HomePage = () => {
   return (
     <div className="homepage-container">
-      <div class="container">
+      <div className="container">
         <div id="content-slider">
           <div id="slider">
             <div id="mask">
               <ul>
-                <li id="first" class="firstanimation">
+                <li id="first" className="firstanimation">
                   <a href="#">
                     {" "}
                     <img
@@ -17,13 +17,13 @@ const HomePage = () => {
                       alt="Cougar"
                     />{" "}
                   </a>
-                  <div class="tooltip">
+                  <div className="tooltip">
                     {" "}
                     <h1>Cougar</h1>{" "}
                   </div>
                 </li>
 
-                <li id="second" class="secondanimation">
+                <li id="second" className="secondanimation">
                   <a href="#">
                     {" "}
                     <img
@@ -31,13 +31,13 @@ const HomePage = () => {
                       alt="Lions"
                     />{" "}
                   </a>
-                  <div class="tooltip">
+                  <div className="tooltip">
                     {" "}
                     <h1>Lions</h1>{" "}
                   </div>
                 </li>
 
-                <li id="third" class="thirdanimation">
+                <li id="third" className="thirdanimation">
                   <a href="#">
                     {" "}
                     <img
@@ -45,13 +45,13 @@ const HomePage = () => {
                       alt="Snowalker"
                     />{" "}
                   </a>
-                  <div class="tooltip">
+                  <div className="tooltip">
                     {" "}
                     <h1>Snowalker</h1>{" "}
                   </div>
                 </li>
 
-                <li id="fourth" class="fourthanimation">
+                <li id="fourth" className="fourthanimation">
                   <a href="#">
                     {" "}
                     <img
@@ -59,13 +59,13 @@ const HomePage = () => {
                       alt="Howling"
                     />{" "}
                   </a>
-                  <div class="tooltip">
+                  <div className="tooltip">
                     {" "}
                     <h1>Howling</h1>{" "}
                   </div>
                 </li>
 
-                <li id="fifth" class="fifthanimation">
+                <li id="fifth" className="fifthanimation">
                   <a href="#">
                     {" "}
                     <img
@@ -73,14 +73,14 @@ const HomePage = () => {
                       alt="Sunbathing"
                     />{" "}
                   </a>
-                  <div class="tooltip">
+                  <div className="tooltip">
                     {" "}
                     <h1>Sunbathing</h1>{" "}
                   </div>
                 </li>
               </ul>
             </div>
-            <div class="progress-bar"></div>
+            <div className="progress-bar"></div>
           </div>
         </div>
       </div>

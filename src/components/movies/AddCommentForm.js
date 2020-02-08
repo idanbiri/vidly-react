@@ -21,7 +21,7 @@ const AddCommentForm = ({ movieId, addNewComment }) => {
       addNewComment(_.last(comments));
       onChangeDisplayForm("none");
     } catch (ex) {
-      console.log(ex);
+      throw new Error(ex);
     }
   };
   return (

@@ -18,7 +18,7 @@ const MovieDetail = props => {
       const { data } = await vidly.get(`/movies/${props.match.params.movieId}`);
       setMovie(data);
     } catch (ex) {
-      console.log(ex);
+      throw new Error(ex);
     }
   };
 

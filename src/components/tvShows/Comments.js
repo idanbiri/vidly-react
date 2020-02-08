@@ -16,7 +16,7 @@ const Comments = ({ tvShowId }) => {
       const { data } = await vidly.get(`/tvShows/${tvShowId}`);
       setComments(data.comments);
     } catch (ex) {
-      console.log(ex);
+      throw new Error(ex);
     }
   };
 
