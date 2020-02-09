@@ -76,7 +76,7 @@ const SignUp = () => {
         }}
         value={phone}
       />
-      <input type="submit" placeholder="Email" />
+      <input type="submit" />
     </form>
   );
 };
