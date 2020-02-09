@@ -1,0 +1,26 @@
+.add-video-form {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.add-video-form button {
+  color: white;
+  margin-bottom: 2px;
+}
+
+.add-video-form div {
+  margin: 10px;
+}
+
+.add-video-form label {
+  color: navy;
+  font-size: 15px;
+}
+
+.add-video-form input[type="text"] {
+  background: rgba(0, 0, 0, 0.712);
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  width: 300px;
+  height: 25px;
+}

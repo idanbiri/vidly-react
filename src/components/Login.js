@@ -56,7 +56,9 @@ const Login = () => {
         value={password}
       />
       <input type="submit" placeholder="Email" />
-      <Link to="/sign-up">Sign-up</Link>
+      <Link to="/sign-up" style={{ color: "white" }}>
+        Sign-up
+      </Link>
     </form>
   );
 };
